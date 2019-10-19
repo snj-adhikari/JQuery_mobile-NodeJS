@@ -24,7 +24,9 @@ app.options('*', cors());
 var path = require('path');
 
 
-app.use('/', express.static(path.join(__dirname, 'view')))
+app.use('/', express.static(path.join(__dirname, 'static')))
+
+
 
 
 // app.use(body_parser);
