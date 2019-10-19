@@ -93,7 +93,7 @@ app.delete('/delete' , (req,res)=>{
         }
     })
 })
-app.get('/', (req, res) => res.status(200).json({success:true , msg: 'Hello World!'}))
+// app.get('/', (req, res) => res.status(200).json({success:true , msg: 'Hello World!'}))
 
 // app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
