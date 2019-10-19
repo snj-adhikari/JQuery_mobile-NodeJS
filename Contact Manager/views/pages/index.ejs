@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+
+<div data-role = "page" data-theme="b" id = "index page">
+<div data-role = "header">
+    <h1 class="text-success"> Contact list</h1>
+    <a class="btn-info ui-btn ui-btn-right" rel="external" href='/new'> New Contact </a>
+</div>
+<div data-role = "main" class = "ui-content">
+    <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
+        <% list.forEach(function(contact){ %>
+        <li>
+            <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-user ui-btn-icon-left ui-btn-a"><%- contact.name %>
+             
+            </a>
+            <div data-role="popup" id="popupMenu" data-theme="b">
+                <ul data-role="listview" data-inset="false" style="min-width:250px;">
+                    <li> <a class="ui-btn ui-shadow  btn-warning ui-corner-all ui-btn-icon-left" rel='external' data-id="<%- contact._id%>" href="/update/<%-contact.id%>" data-role="button" data-inline="true" data-icon="edit" data-iconpos="notext"> Edit </a></li>
+                    <li> <button class="ui-btn btn-danger btn-delete ui-icon-delete" data-role="button" data-id="<%- contact._id%>" data-icon="delete" data-inline='true' data-iconpos="notext"> Delete </a></li>
+                    <li data-role='list-divider'> Contact Detail </li><li> P- No : <span class="text-success" ><%- contact.primary_no  %></span></li>
+                    <li> Sec-  No : <span class="text-warning"> <%-  contact.secondary_no %> </span></li>
+                    <li data-role='list-divider'> Name : <span> <%- contact.name %> </span></li>
+                    <li data-role='list-divider'> Org : <span> <%- contact.org  %> </span></li>
+                    <li data-role='list-divider'> Know relation : <span> <%- contact.known_relation %> </span></li>
+                    <li data-role='list-divider'> Rating : <span> <%- contact.rating  %> </span></li>
+                    <li data-role='list-divider'> Trust: <span> <%- contact.trust  %> </span></li>
+                    <li data-role='list-divider'> Available : <span><%- contact.available.join() %> </span></li>
+                </ul>
+            </div>
+            <% }) %>
+        </li>
+        
+    </ul>
+    
+</div>
+
+
+<% include ../partials/footer %>

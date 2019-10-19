@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="stylesheet" href="css/mobile_jquery.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Contact Manager </title>
+  </head>
+  <body>
+    <div data-role = "page" id = "updatepage">
+      <div data-role = "header">
+        <h1 class="text-success"> Update Contact </h1>
+        <a class="btn-info ui-btn ui-btn-left" rel="external" href='index.html'> Go Back </a>
+      </div>
+      <div data-role = "main" class = "ui-content">
+          <div class="ui-field-contain">
+            <label for="name"> Name : </label>
+            <input type="text" name="name" id="name">
+          </div>
+          <div class="ui-field-contain">
+            <label for="organization"> Organization : </label>
+            <input type="text" name="name" id="organization">
+          </div>
+          <div class="ui-field-contain">
+            <label for="known_relation" class="select"> Known Circle</label>
+            <select name="known_relation" id="known_relation">
+              <option value= ' ~~~~ '> Type of Contact </option>
+              <option value="Close">Close </option>
+              <option value="Relatives">Relatives </option>
+              <option value="Friends"> Friends</option>
+              <option value="Freinds of Freind"> Freinds of Freind</option>
+              <option value="Acquaintence "> Acquaintence</option>
+              <option value="Professional "> Professional </option>
+            </select>
+          </div>
+          <div class="ui-field-contain">
+            <label for="Rating">Rating  (1 to 5) </label>
+            <input type="range" name="Rating" id="Rating" value="0" min="0" max="5" data-highlight="true" step="0.01" />
+          </div>
+          <div class="Label-IMP">
+            <label for="percent_acid">Trust (% usable) </label>
+            <input type="range" name="percent_acid" id="percent_acid" value="0" min="0" max="100" data-highlight="true" step="0.01" />
+          </div>
+          <div class="ui-field-contain">
+            <label for="percent_alcohol">Alcohal Percentage (%) </label>
+            <input type="range" name="percent_alcohol" id="percent_alcohol" value="0" min="0" max="100" data-highlight="true" step="0.01" />
+          </div>
+            
+          <div class="ui-field-contain">
+            <label for="body-select" class="select">Sweetness : </label>
+            <select name="body-select" id="body-select">
+              <option value="light">Light</option>
+              <option value="medium">Medium</option>
+              <option value="full" selected>full</option>
+            </select>
+          </div>
+
+          <div class="ui-field-contain">
+            <label for="Phone No"> Phone No  (Primary) :  </label>
+            <input type="number" name="Phone No" id="Phone No" value="0">
+          </div>
+          <div class="ui-field-contain">
+              <label for="secondary">Phone no ( Secondary): </label>
+              <input type="number" name="secondary" id="secondary_phn" value="0">
+          </div>
+          <div class="ui-field-contain">
+            
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>Available</legend>
+                
+                <input type="checkbox" name="available[]"  value="monday">
+                <label for="monday">Monday</label>
+                <input type="checkbox" name="available[]"  value="tuesday">
+                <label for="tuesday">Tuesday</label>
+                <input type="checkbox" name="available[]"  value="wednesday">
+                <label for="wednesday">Wednesday</label>
+                <input type="checkbox" name="available[]"  value="thursday">
+                <label for="thursday">Thursday</label>
+                <input type="checkbox" name="available[]"  value="friday">
+                <label for="friday">Friday</label>
+                <input type="checkbox" name="available[]"  value="saturday">
+                <label for="saturday">Saturday</label>
+                <input type="checkbox" name="available[]"  value="sunday">
+                <label for="sunday">Sunday</label>
+            </fieldset>
+          </div>
+
+          
+          
+      </div>
+
+      <div data-role = "footer">
+        <!-- <h1>Footer Text</h1> -->
+        <div class="ui-grid-b">
+          <div class="ui-block-a"></div>
+          <button class="btn btn-success ui-btn-center" id="save_btn">Save</button></div>
+          <div class="ui-block-c"></div>
+        </div><!-- /grid-b -->
+        
+      </div>
+    </div>
+    <script src="js/jquery.min.js" ></script>
+    <script src='js/sweetalert.js'></script>
+    <script src="js/jquery-mobile.min.js" ></script>
+    <script src="js/html_var.js" ></script>
+    <script src= "js/custom.js"></script>
+    
+  </body>
+</html>

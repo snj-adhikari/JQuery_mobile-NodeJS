@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="css/jquery-mobile.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Wine Seller Diary</title>
+  </head>
+  <body>
+    <div data-role = "page" id = "pageone">
+      <div data-role = "header">
+        <h1>Wine Collection List</h1>
+        <a href='new-item.html' rel="external" class="ui-btn btn-success ui-btn-right"> New Items</a>
+      </div>
+      <div data-role = "main" id="home-page" class = "ui-content ">
+          <ul data-role="listview" class="" data-filter="true" data-filter-placeholder="Search fruits..." data-inset="true">
+          <!--   <li data-role="collapsible" data-iconpos="right" data-shadow="false" data-corners="false">
+              <h2> ID : Birds</h2>
+              <ul data-role="listview" data-shadow="false" data-inset="false" data-corners="false">
+                <li>Acidity - <span class="text-info">10% </span></li>
+                <li> Availability - <span class="text-danger"></span></li>
+                <li>Quantity - <span class="text-primary"> </span></li>
+                <li>Storage Time - <span class="text-success"> </span></li>
+                <li>Manufactured Date - <span class="text-warning"></span> </li>
+                <li>Sweetness - <span class="text-black"></span></li>
+              </ul> -->
+            </li>
+            
+          
+          </ul>
+      </div>
+
+      <div data-role = "footer">
+        <!-- <h1>Footer Text</h1> -->
+      </div>
+    </div>
+    <script src="js/jquery.min.js" ></script>
+    <script src='js/sweetalert.js'></script>
+    <script src="js/jquery-mobile.min.js" ></script>
+    <script src="js/html_var.js" ></script>
+    <script src= "js/custom.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+         getData();
+      });
+    </script>
+    
+  </body>
+</html>

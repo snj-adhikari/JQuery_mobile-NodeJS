@@ -1,0 +1,91 @@
+<% include ../partials/header %>
+
+
+<div data-role = "page" data-theme="b" id = "updatepage">
+<div data-role = "header">
+    <h1 class="text-success"> Update Contact </h1>
+    <a class="btn-info ui-btn ui-btn-left" rel="external" href='/'> Go Back </a>
+</div>
+<div data-role = "main" class = "ui-content">
+    <form action ="/update/<%-contact._id%>" method="post" data-ajax='false'>
+        <div class="ui-field-contain">
+            <label for="name"> Name : </label>
+            <input type="text" name="name" id="name" value="<%- contact.name %>">
+        </div>
+        <div class="ui-field-contain">
+            <label for="organization"> Organization : </label>
+            <input type="text" name="org" id="organization" value="<%- contact.org %>">
+        </div>
+        <div class="ui-field-contain">
+            <label for="known_relation" class="select"> Known Circle</label>
+            <select name="known_relation" id="known_relation">
+            <option value= ' ~~~~ '> Type of Contact </option>
+            <option value="Close" <% if(contact.known_relation == "Close"){ %> selected <% }%>>Close </option>
+            <option value="Relatives" <% if(contact.known_relation == "Relatives"){ %> selected <% }%>>Relatives </option>
+            <option value="Friends" <% if(contact.known_relation == "Friends"){ %> selected <% }%>> Friends</option>
+            <option value="Freinds of Freind" <% if(contact.known_relation == "Freinds of Freind"){ %> selected <% }%>> Freinds of Freind</option>
+            <option value="Acquaintence" <% if(contact.known_relation == "Acquaintence"){ %> selected <% }%>> Acquaintence</option>
+            <option value="Professional" <% if(contact.known_relation == "Professional"){ %> selected <% }%>> Professional </option>
+            </select>
+        </div>
+        <div class="ui-field-contain">
+            <label for="Rating">Rating  (1 to 5) </label>
+            <input type="range" name="rating" id="Rating" value="0" min="0" value="<%- contact.rating %>" max="5" data-highlight="true" step="0.01" />
+        </div>
+        <div class="ui-field-contain">
+            <label for="trust">Trust (% usable) </label>
+            <input type="range" name="trust" id="trust" value="0" min="0"  value="<%- contact.trust %>max="100" data-highlight="true" step="0.01" />
+        </div>
+        
+            
+       
+
+        <div class="ui-field-contain">
+            <label for="Phone No"> Phone No  (Primary) :  </label>
+            <input type="number" name="primary_no" id="Phone No" value="<%- contact.primary_no %>">
+        </div>
+        <div class="ui-field-contain">
+            <label for="secondary">Phone no ( Secondary): </label>
+            <input type="number" name="secondary_no" id="secondary_phn" value="<%- contact.secondary_no %>">
+        </div>
+        <div class="ui-field-contain">
+            
+            <fieldset data-role="controlgroup" data-type="horizontal" >
+                
+                <legend>Available</legend>
+                <input type="checkbox" name="available[]" <% if(contact.available.includes("monday")){%> checked <% }%> id="monday" value="monday">
+                <label for="monday">Mon</label>
+                <input type="checkbox" name="available[]"  <% if(contact.available.includes("tuesday")){%> checked <% }%> id="tuesday" value="tuesday">
+                <label for="tuesday">Tues</label>
+                <input type="checkbox" name="available[]"  <% if(contact.available.includes("wednesday")){%> checked <% }%> id="wednesday" value="wednesday">
+                <label for="wednesday">Wed</label>
+                <input type="checkbox" name="available[]"  <% if(contact.available.includes("thursday")){%> checked <% }%> id="thursday" value="thursday">
+                <label for="thursday">Thurs</label>
+                <input type="checkbox" name="available[]"  <% if(contact.available.includes("friday")){%> checked <% }%> id="friday" value="friday">
+                <label for="friday">Fri</label>
+                <input type="checkbox" name="available[]"  <% if(contact.available.includes("saturday")){%> checked <% }%> id="saturday" value="saturday">
+                <label for="saturday">Sat</label>
+                <input type="checkbox" name="available[]"  <% if(contact.available.includes("sunday")){%> checked <% }%> id="sunday" value="sunday">
+                <label for="sunday">Sun</label>
+            </fieldset>
+        </div>
+        <div class='ui-field-contain'>
+          
+            <div class="ui-grid-b">
+            <div class="ui-block-a"></div>
+            <button  type="submit" class="btn btn-success ui-btn-center"  data-id="<%- contact._id%>" rel="external" id="save_btn">Save</button></div>
+            <div class="ui-block-c"></div>
+            </div><!-- /grid-b -->
+        </div>
+    </form>
+    
+    
+</div>
+
+    
+    
+
+</div>
+
+
+<% include ../partials/footer %>

@@ -1,0 +1,91 @@
+<% include ../partials/header %>
+
+
+<div data-role = "page" data-theme="b" id = "updatepage">
+<div data-role = "header">
+    <h1 class="text-success"> Update Contact </h1>
+    <a class="btn-info ui-btn ui-btn-left" rel="external" href='/'> Go Back </a>
+</div>
+<div data-role = "main" class = "ui-content">
+    <form action ="/new" method="post" data-ajax='false'>
+        <div class="ui-field-contain">
+            <label for="name"> Name : </label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="ui-field-contain">
+            <label for="organization"> Organization : </label>
+            <input type="text" name="org" id="organization">
+        </div>
+        <div class="ui-field-contain">
+            <label for="known_relation" class="select"> Known Circle</label>
+            <select name="known_relation" id="known_relation">
+            <option value= ' ~~~~ '> Type of Contact </option>
+            <option value="Close">Close </option>
+            <option value="Relatives">Relatives </option>
+            <option value="Friends"> Friends</option>
+            <option value="Freinds of Freind"> Freinds of Freind</option>
+            <option value="Acquaintence "> Acquaintence</option>
+            <option value="Professional "> Professional </option>
+            </select>
+        </div>
+        <div class="ui-field-contain">
+            <label for="Rating">Rating  (1 to 5) </label>
+            <input type="range" name="rating" id="Rating" value="0" min="0" max="5" data-highlight="true" step="0.01" />
+        </div>
+        <div class="ui-field-contain">
+            <label for="trust">Trust (% usable) </label>
+            <input type="range" name="trust" id="trust" value="0" min="0" max="100" data-highlight="true" step="0.01" />
+        </div>
+        
+            
+       
+
+        <div class="ui-field-contain">
+            <label for="Phone No"> Phone No  (Primary) :  </label>
+            <input type="number" name="primary_no" id="Phone No" value="0">
+        </div>
+        <div class="ui-field-contain">
+            <label for="secondary">Phone no ( Secondary): </label>
+            <input type="number" name="secondary_no" id="secondary_phn" value="0">
+        </div>
+        <div class="ui-field-contain">
+            
+            <fieldset data-role="controlgroup" data-type="horizontal" >
+                
+                <legend>Available</legend>
+                <input type="checkbox" name="available[]" id="monday" value="monday">
+                <label for="monday">Mon</label>
+                <input type="checkbox" name="available[]" id="tuesday" value="tuesday">
+                <label for="tuesday">Tues</label>
+                <input type="checkbox" name="available[]" id="wednesday" value="wednesday">
+                <label for="wednesday">Wed</label>
+                <input type="checkbox" name="available[]" id="thursday" value="thursday">
+                <label for="thursday">Thurs</label>
+                <input type="checkbox" name="available[]" id="friday" value="friday">
+                <label for="friday">Fri</label>
+                <input type="checkbox" name="available[]" id="saturday" value="saturday">
+                <label for="saturday">Sat</label>
+                <input type="checkbox" name="available[]" id="sunday" value="sunday">
+                <label for="sunday">Sun</label>
+            </fieldset>
+        </div>
+        <div class='ui-field-contain'>
+          
+            <div class="ui-grid-b">
+            <div class="ui-block-a"></div>
+            <button  type="submit" class="btn btn-success ui-btn-center" rel="external" id="save_btn">Save</button></div>
+            <div class="ui-block-c"></div>
+            </div><!-- /grid-b -->
+        </div>
+    </form>
+    
+    
+</div>
+
+    
+    
+
+</div>
+
+
+<% include ../partials/footer %>

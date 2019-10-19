@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="css/jquery-mobile.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Wine Seller Diary</title>
+  </head>
+  <body>
+    <div data-role = "page" id = "pageone">
+      <div data-role = "header">
+        <h1>Add New Wine Item</h1>
+        <a class="btn-info ui-btn ui-btn-left" rel="external" href='index.html'> Go Back </a>
+      </div>
+      <div data-role = "main" class = "ui-content">
+          <div class="ui-field-contain">
+            <label for="sweetness-select"> Name : </label>
+            <input type="text" name="name" id="name">
+          </div>
+          <div class="ui-field-contain">
+            <label for="sweetness-select" class="select">Sweetness : </label>
+            <select name="sweetness-select" id="sweetness-select">
+              <option value="moscato">Moscato</option>
+              <option value="white_zinfandel">White Zinfandel</option>
+              <option value="riesling"> Riesling</option>
+              <option value="port"> Port</option>
+              <option value="sauternes"> Sauternes</option>
+            </select>
+          </div>
+          <div class="ui-field-contain">
+            <label for="percent_sweet">Sweet Percentage (%) </label>
+            <input type="range" name="percent_sweet" id="percent_sweet" value="0" min="0" max="100" data-highlight="true" step="0.01" />
+          </div>
+          <div class="ui-field-contain">
+            <label for="percent_acid">Acid Percentage (%) </label>
+            <input type="range" name="percent_acid" id="percent_acid" value="0" min="0" max="100" data-highlight="true" step="0.01" />
+          </div>
+          <div class="ui-field-contain">
+            <label for="percent_alcohol">Alcohal Percentage (%) </label>
+            <input type="range" name="percent_alcohol" id="percent_alcohol" value="0" min="0" max="100" data-highlight="true" step="0.01" />
+          </div>
+            
+          <div class="ui-field-contain">
+            <label for="body-select" class="select">Sweetness : </label>
+            <select name="body-select" id="body-select">
+              <option value="light">Light</option>
+              <option value="medium">Medium</option>
+              <option value="full" selected>full</option>
+            </select>
+          </div>
+
+          <div class="ui-field-contain">
+            <label for="storage_period"> Storage Period </label>
+            <input type="number" name="storage_period" id="storage_period" value="0">
+          </div>
+
+          <div class="ui-field-contain">
+            <label for="available">Available :</label>
+            <select name="available" id="available" data-role="slider">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select> 
+          </div>
+
+          <div class="ui-field-contain">
+            <label for="quantity"> Quantity </label>
+            <input type="number" name="quantity" id="quantity" value="0">
+          </div>
+          
+      </div>
+
+      <div data-role = "footer">
+        <!-- <h1>Footer Text</h1> -->
+        <div class="ui-grid-b">
+          <div class="ui-block-a"></div>
+          <button class="btn btn-success ui-btn-center" id="save_btn">Save</button></div>
+          <div class="ui-block-c"></div>
+        </div><!-- /grid-b -->
+        
+      </div>
+    </div>
+    <script src="js/jquery.min.js" ></script>
+    <script src='js/sweetalert.js'></script>
+    <script src="js/jquery-mobile.min.js" ></script>
+    <script src="js/html_var.js" ></script>
+    <script src= "js/custom.js"></script>
+    
+  </body>
+</html>
