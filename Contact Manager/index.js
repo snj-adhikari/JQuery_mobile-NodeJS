@@ -80,6 +80,11 @@ app.get('/', (req, res) => {
     }
     else{
       sorted_detail =  detail.sort();
+      var sorted_detail= detail.sort(function IHaveAName(a, b) { // non-anonymous as you ordered...
+          return b.name < a.name ?  1 // if b should come earlier, push a to end
+                : b.name > a.name ? -1 // if b should come later, push a to begin
+                : 0;                   // a and b are equal
+      });
       info.list = sorted_detail;
     }
 
