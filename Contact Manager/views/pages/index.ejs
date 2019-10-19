@@ -10,10 +10,10 @@
     <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
         <% list.forEach(function(contact){ %>
         <li>
-            <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-user ui-btn-icon-left ui-btn-a"><%- contact.name %>
+            <a href="#popupMenu_<%-contact._id%>"" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-user ui-btn-icon-left ui-btn-a"><%- contact.name %>
              
             </a>
-            <div data-role="popup" id="popupMenu" data-theme="b">
+            <div data-role="popup" id="popupMenu_<%-contact._id%>" data-theme="b">
                 <ul data-role="listview" data-inset="false" style="min-width:250px;">
                     <li> <a class="ui-btn ui-shadow  btn-warning ui-corner-all ui-btn-icon-left" rel='external' data-id="<%- contact._id%>" href="/update/<%-contact.id%>" data-role="button" data-inline="true" data-icon="edit" data-iconpos="notext"> Edit </a></li>
                     <li> <button class="ui-btn btn-danger btn-delete ui-icon-delete" data-role="button" data-id="<%- contact._id%>" data-icon="delete" data-inline='true' data-iconpos="notext"> Delete </a></li>

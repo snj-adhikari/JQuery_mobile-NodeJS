@@ -79,7 +79,8 @@ app.get('/', (req, res) => {
       info.err = true;
     }
     else{
-      info.list = detail;
+      sorted_detail =  detail.sort();
+      info.list = sorted_detail;
     }
 
     res.render('pages/index' , info);
