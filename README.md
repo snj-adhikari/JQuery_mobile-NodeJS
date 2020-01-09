@@ -30,7 +30,7 @@ This application strictly follows mobile ui view to support on portable devices.
   
   - Open UI 
     - Go to browser 
-    - open url : localhost:3000/index.html
+    - open url : jttp://localhost:3000/index.html
     
  
  ### Contact Manager App  
