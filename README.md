@@ -1,4 +1,4 @@
-# Wine Seller CRUD Project , &&  Contact Manager Project 
+# Wine Seller CRUD Project  &&  Contact Manager Project 
 
 This is the sample project using node js and jquery mobile . 
 
